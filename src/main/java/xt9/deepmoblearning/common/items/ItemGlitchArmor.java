@@ -1,5 +1,6 @@
 package xt9.deepmoblearning.common.items;
 
+import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.item.EntityItem;
@@ -54,11 +55,13 @@ public class ItemGlitchArmor extends ItemArmor {
 
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
-        list.add("§rBonus while full set is equipped§r");
-        list.add("§r(Bonuses are disabled during Trials)§r");
-        list.add("§6  1. " + PRISTINE_SET_CHANCE + "% chance to drop " + PRISTINE_SET_NUMBER_OF_DROPS + " Pristine Matter§r");
-        list.add("§6     when a Data Model gains Data.§r");
-        list.add("§6  2. Flight & Immunity against fall damage§r");
+        list.add(I18n.format("deepmoblearning.tooltips.glitch_armor.line1"));
+        list.add(I18n.format("deepmoblearning.tooltips.glitch_armor.line2"));
+        list.add(I18n.format("deepmoblearning.tooltips.glitch_armor.line3")
+                .replace("{chance}", PRISTINE_SET_CHANCE + "%"));
+        list.add(I18n.format("deepmoblearning.tooltips.glitch_armor.line4") + PRISTINE_SET_NUMBER_OF_DROPS);
+        list.add(I18n.format("deepmoblearning.tooltips.glitch_armor.line5"));
+        list.add(I18n.format("deepmoblearning.tooltips.glitch_armor.line6"));
     }
 
     public static boolean isSetEquippedByPlayer(EntityPlayer player) {

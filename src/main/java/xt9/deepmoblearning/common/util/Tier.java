@@ -1,5 +1,6 @@
 package xt9.deepmoblearning.common.util;
 
+import net.minecraft.client.resources.I18n;
 import xt9.deepmoblearning.common.config.Config;
 
 /**
@@ -21,12 +22,11 @@ public class Tier {
     public static String getTierName(int tier, boolean getNextTierName) {
         int addTiers = getNextTierName ? 1 : 0;
         switch(tier + addTiers) {
-            case 0: return "§8Faulty§r";
-            case 1: return "§aBasic§r";
-            case 2: return "§9Advanced§r";
-            case 3: return "§dSuperior§r";
-            case 4: return "§6Self Aware§r";
-            default: return "§8Faulty§r";
+            case 1: return I18n.format("deepmoblearning.data_model.tiername.1");
+            case 2: return I18n.format("deepmoblearning.data_model.tiername.2");
+            case 3: return I18n.format("deepmoblearning.data_model.tiername.3");
+            case 4: return I18n.format("deepmoblearning.data_model.tiername.4");
+            default: return I18n.format("deepmoblearning.data_model.tiername.0");
         }
     }
 

@@ -1,5 +1,8 @@
 # 1.12.2
 
+### 2.2.1
+- Added support for language files for some item information and text messages
+
 ### 2.2.0
 - Removed GuideAPI guide
 - Added Patchouli guide (Soft dependency)

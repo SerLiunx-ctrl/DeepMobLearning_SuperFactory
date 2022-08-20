@@ -1,5 +1,6 @@
 package xt9.deepmoblearning.common.items;
 
+import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
@@ -24,9 +25,8 @@ public class ItemGlitchFragment extends ItemBase {
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
         if(Config.isSootedRedstoneCraftingEnabled.getBoolean()) {
-            list.add("Crafted by crushing a " + new ItemStack(Registry.glitchHeart, 1).getDisplayName());
-            list.add("against some §5Obsidian§7 (Left click)");
-            list.add("§rYields 3 fragments per crushed heart");
+            list.add(I18n.format("deepmoblearning.tooltips.glitch_fragment")
+                    .replace("{heart}", new ItemStack(Registry.glitchHeart, 1).getDisplayName()));
         }
     }
 

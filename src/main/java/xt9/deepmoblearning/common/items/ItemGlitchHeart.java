@@ -1,5 +1,6 @@
 package xt9.deepmoblearning.common.items;
 
+import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -18,6 +19,6 @@ public class ItemGlitchHeart extends ItemBase{
 
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
-        list.add("Drops from System Glitches");
+        list.add(I18n.format("deepmoblearning.tooltips.glitch_heart"));
     }
 }

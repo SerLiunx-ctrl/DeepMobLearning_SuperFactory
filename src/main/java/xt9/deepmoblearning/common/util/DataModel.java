@@ -1,5 +1,6 @@
 package xt9.deepmoblearning.common.util;
 
+import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
@@ -97,8 +98,8 @@ public class DataModel {
         setTotalKillCount(stack, getTotalKillCount(stack) + 1);
 
         if(DataModelExperience.shouldIncreaseTier(tier, i, getCurrentTierSimulationCount(stack))) {
-            PlayerHelper.sendMessage(player, new TextComponentString(stack.getDisplayName() + " reached the " + getTierName(stack, true) + " tier"));
-
+            PlayerHelper.sendMessage(player, new TextComponentString(I18n.format("deepmoblearning.message.data_model_level_up")
+                    .replace("{model}", stack.getDisplayName()).replace("{clevel}", getTierName(stack, true))));
             setCurrentTierKillCount(stack, 0);
             setCurrentTierSimulationCount(stack, 0);
             setTier(stack, tier + 1);

@@ -2,6 +2,7 @@ package xt9.deepmoblearning.common.items;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -52,20 +53,21 @@ public class ItemGlitchSword extends ItemSword {
 
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
-        list.add("§rBonus: Quick learner§r");
-        list.add("§r(Bonuses are disabled during Trials)§r");
-        list.add("§6The Data gained from the demise of a mob is doubled,§r");
-        list.add("§6when Data is gained there is also a small chance§r");
-        list.add("§6that the sword will get a permanent damage increase.§r");
-        list.add("");
-        list.add("Current damage increase: §b" + getPermanentWeaponDamage(stack) + " §r(Max " + DAMAGE_BONUS_MAX +")§r");
+        list.add(I18n.format("deepmoblearning.tooltips.glitch_infused_sword_line1"));
+        list.add(I18n.format("deepmoblearning.tooltips.glitch_infused_sword_line2"));
+        list.add(I18n.format("deepmoblearning.tooltips.glitch_infused_sword_line3"));
+        list.add(I18n.format("deepmoblearning.tooltips.glitch_infused_sword_line4")
+                .replace("{chance}", DAMAGE_INCREASE_CHANCE + "%").replace("{bonus}",
+                        String.valueOf(DAMAGE_BONUS)).replace("{max_bonus}", String.valueOf(DAMAGE_BONUS_MAX)));
+        list.add(I18n.format("deepmoblearning.tooltips.glitch_infused_sword_line5")
+                .replace("{damage}", String.valueOf(getPermanentWeaponDamage(stack))));
     }
 
     public static void increaseDamage(ItemStack stack, EntityPlayerMP player) {
         if(ThreadLocalRandom.current().nextInt(1, 100) <= DAMAGE_INCREASE_CHANCE) {
             int current = getPermanentWeaponDamage(stack);
 
-            setPermanentWeaponDamage(stack, current + DAMAGE_BONUS >= DAMAGE_BONUS_MAX ? DAMAGE_BONUS_MAX : current + DAMAGE_BONUS);
+            setPermanentWeaponDamage(stack, Math.min(current + DAMAGE_BONUS, DAMAGE_BONUS_MAX));
 
             if(getPermanentWeaponDamage(stack) >= DAMAGE_BONUS_MAX) {
                 PlayerHelper.sendMessage(player, new TextComponentString("Your " + stack.getDisplayName() + " has now reached peak performance!"));

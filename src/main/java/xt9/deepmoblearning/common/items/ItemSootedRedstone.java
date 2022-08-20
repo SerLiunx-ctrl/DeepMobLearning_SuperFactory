@@ -1,5 +1,6 @@
 package xt9.deepmoblearning.common.items;
 
+import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -21,8 +22,7 @@ public class ItemSootedRedstone extends ItemBase {
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
         if(Config.isSootedRedstoneCraftingEnabled.getBoolean()) {
-            list.add("Crafted by crushing §cRedstone§7 against");
-            list.add("a §rBlock of Coal§7 (Left click)");
+            list.add(I18n.format("deepmoblearning.tooltips.soot_covered_redstone"));
         }
     }
 }

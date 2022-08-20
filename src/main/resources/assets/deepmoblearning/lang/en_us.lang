@@ -119,6 +119,53 @@ deepmoblearning.jei.category.trial_keystone.tier=§r%s§r
 #
 deepmoblearning.holdshift=§7- hold §r§oSHIFT§r§7 for more info§r
 
+
+#
+#Tooltips
+#
+deepmoblearning.holdshift.create_model_learner.line1=§r模型学习器, 但是创造模式(调试快速升级)§r
+deepmoblearning.holdshift.create_model_learner.line2=§r§o潜行§r§7 + §r§o右键§r§7 直接升级.§r
+deepmoblearning.holdshift.create_model_learner.line3=§r§oCTRL§r§7 + §r§o右键§r§7 模拟一次击杀对应怪物.§r
+deepmoblearning.holdshift.create_model_learner.line4=§r背包或副手栏位中必须有一个 §b深度学习器 §r且其中包含有数据模型§r
+
+deepmoblearning.tooltips.deep_learner.line1=§r当拿在主手或副手上时会显示内部模型详细信息§r
+deepmoblearning.tooltips.deep_learner.line2=§r右键可以打开 §bGUI §r以管理内部的数据模型§r
+deepmoblearning.tooltips.deep_learner.contains_models=§r§e目前包含以下数据模型:§r
+
+deepmoblearning.tooltips.glitch_armor.line1=§r套装奖励:§r
+deepmoblearning.tooltips.glitch_armor.line2=§r(§4测试中不激活该套装奖励§r)
+deepmoblearning.tooltips.glitch_armor.line3=§r§b{chance} §e的概率掉落特定数量的原始物质:§r
+deepmoblearning.tooltips.glitch_armor.line4=§r§e掉落数量: §2
+deepmoblearning.tooltips.glitch_armor.line5=§r(在数据模型获得数据时触发) §r
+deepmoblearning.tooltips.glitch_armor.line6=§r§e特殊奖励: §6飞行 §r+ §b免疫掉落伤害
+
+deepmoblearning.tooltips.soot_covered_redstone=§r(手持 §c红石§r 左键敲击 §7煤炭块 §r来获得)§r
+deepmoblearning.tooltips.glitch_fragment=§r手持 {heart} §r左键敲击 §7黑曜石§r 来获得§r
+deepmoblearning.tooltips.glitch_heart=§r从 §e系统故障 §r掉落
+deepmoblearning.tooltips.glitch_infused_ingot=§r将一个{heart}和§3青金石§r、§6金锭§r扔进水中即可获得§r
+
+deepmoblearning.tooltips.glitch_infused_sword_line1=§r§e奖励说明:§r
+deepmoblearning.tooltips.glitch_infused_sword_line2=§r(§4测试中不激活该奖励加成§r)
+deepmoblearning.tooltips.glitch_infused_sword_line3=§r§e 数据模型获得数据时, 获得的数据量加倍§r
+deepmoblearning.tooltips.glitch_infused_sword_line4=§r 同时有§b{chance}§r的概率提升§b{bonus}§r点伤害,最高提升§a{max_bonus}§r点伤害§r
+deepmoblearning.tooltips.glitch_infused_sword_line5=§2当前伤害提升: §3{damage}§r
+
+deepmoblearning.tooltips.living_matter=§r§e右键§r使用可以获得经验, §e潜行+右键§r可以全部同时使用§r
+
+#
+#   tier name
+#
+deepmoblearning.data_model.tiername.0=§r§8Faulty§r
+deepmoblearning.data_model.tiername.1=§r§aBasic§r
+deepmoblearning.data_model.tiername.2=§r§9Advanced§r
+deepmoblearning.data_model.tiername.3=§d§eSuperior§r
+deepmoblearning.data_model.tiername.4=§d§6Self Aware§r
+
+#
+#   message
+#
+deepmoblearning.message.data_model_level_up=§r{model} §7reached {clevel}§r tier!
+
 #
 # Entity
 #

@@ -42,9 +42,10 @@ public class ItemCreativeModelLearner extends ItemBase {
         if(!KeyboardHelper.isHoldingShift()) {
             list.add(I18n.format("deepmoblearning.holdshift"));
         } else {
-            list.add("A creative item that levels up data models inside the Deep Learner." );
-            list.add("§r§oSHIFT§r§7 + §r§oRIGHT§r§7 click to increase tier.§r" );
-            list.add("§r§oCTRL§r§7 + §r§oRIGHT§r§7 click to simulate kills.§r" );
+            list.add(I18n.format("deepmoblearning.holdshift.create_model_learner.line1"));
+            list.add(I18n.format("deepmoblearning.holdshift.create_model_learner.line2"));
+            list.add(I18n.format("deepmoblearning.holdshift.create_model_learner.line3") );
+            list.add(I18n.format("deepmoblearning.holdshift.create_model_learner.line4"));
         }
 
     }
